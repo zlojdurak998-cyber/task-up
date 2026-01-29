@@ -19,6 +19,33 @@
         <h1 class="title">
             Задачи
         </h1>
+        <div class="form-add">
+          <input
+            type="text"
+            class="form-add__input"
+            placeholder="Введите задачу"
+            />
+            <button class="form-add__button">Добавить</button>
+            <div class="toolbar__input">
+                <input
+                type="text"
+                class="toolbar__input"
+                placeholder="Поиск задач..."
+                />
+                <input type="text" class="toolbar_input" placeholder="Поиск задач"
+                <div class="toolbar_tabs tabs">
+                    <button class="tabs__item">Все</button>
+                    <button class="tabs__item">Активные</button>
+                    <button class="tabs__item">Завершённые</button>
+                />
+                </div>
+            </div>
+        </div>
+        <select class="toolbar__sort">
+            <option value="new">Сначала новые</option>
+            <option value="old">Сначала старые</option>
+        </select>
     </main>
+    <script src="task.js"></script>
 </body>
 </html>
