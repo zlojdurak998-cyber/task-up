@@ -47,8 +47,8 @@ function summa(a, b) {
   return a + b;
 }
 
-console.log(summma(2, 3))
-console.log(summma(8, 34))
+console.log(summa(2, 3))
+console.log(summa(8, 34))
 
 function isTaskDone(status) {
   return status === "выполнена";
@@ -64,4 +64,57 @@ function taskSummery(total, done) {
   );
 }
 
-console.log(taskSummary(8, 3))
+console.log(taskSummery(8, 3))
+
+let cities = ["Москва", "Питер", "Казань"];
+
+cities [2] = "Новосибирск";
+console.log(cities);
+
+let task = {
+  id: 1,
+  title: "Купить молоко",
+  status: "активна"
+}
+
+console.log(task.title);
+task.status = "выполнена";
+console.log(task.status);
+
+let tasks1 = [
+  { id: 1, title: "Купить молоко", status: "активна"},
+  { id: 2, title: "Позвонить врачу", status: "выполнена"},
+  { id: 3, title: "Сделать уроки", status: "активна"},
+]
+
+console.log(tasks1[0].title);
+console.log(tasks1[1].status);
+
+let user = {
+  name: "Иван",
+  tasks: tasks1
+}
+
+console.log(user)
+
+function filterByStatus(tasks, status) {
+  return tasks.filter((task) => task.status === status);
+}
+
+console.log(filterByStatus(tasks, "Активна"));
+
+function sortByTitle(tasks) {
+  tasks.sort(function(a, b) {
+    if (a.title > b.title) {
+      return 1
+    }
+    return 0
+  })
+  return tasks
+}
+
+console.log(sortByTitle(tasks))
+
+function searchByTitle(tasks, query) {
+  let q 
+}

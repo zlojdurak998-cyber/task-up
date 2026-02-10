@@ -166,3 +166,40 @@
     margin-bottom: 5px;
     color: #221c2a;
 }
+
+.button--clear {
+    padding: 6px 12px; 
+    font-size: 13px;
+    background-color: transparent;
+    border-radius: 8px;
+    text-align: left;
+    color: #735cc6;
+    border: 1px dashed #a28bdc;
+    cursor: pointer;
+    transition: background-color 0.2s ease, 
+                color 0.2s ease, 
+                border 0.2s ease;
+    display: inline-block;
+    font-family: inherit;
+    outline: none;
+}
+
+.button--clear:hover {
+    background-color: #f6efff; 
+    color: #735cc6;
+    border: 1px solid #735cc6; 
+}
+
+.button--clear:active {
+    background-color: #e9e5ff; 
+    border-color: #5d47aa; 
+    color: #5d47aa; 
+}
+
+.button--clear:disabled {
+    color: #c8b9e9; 
+    border-color: #c8c5cf; 
+    background-color: #f1f1f3; 
+    cursor: not-allowed; 
+    pointer-events: none;
+}
