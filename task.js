@@ -16,14 +16,14 @@ if (title === "") {
   console.log("Задача:", title);
 }
 
-let taskS = 5;
-if (tasks === 0) {
-  console.log("Список пуст");
-} else if (tasks <= 3) {
-  console.log("Немного задач");
-} else {
-  console.log("Много задач");
-}
+// let tasks = 5;
+// if (tasks === 0) {
+//   console.log("Список пуст");
+// } else if (tasks <= 3) {
+//   console.log("Немного задач");
+// } else {
+//   console.log("Много задач");
+// }
 
 if (title === "") {
   console.log("Заголовок пустой");
