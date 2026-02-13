@@ -31,15 +31,15 @@ if (title === "") {
   console.log("Заголовок:" + title);
 }
 
-let  = 2;
+// let  = 2;
 
-if (tasks === 0) {
-  console.log("Список пуст, можно отдыхать");
-} else if (tasks > 0 && tasks <= 3) {
-  console.log("Есть задачи для выполнения");
-} else if (tasks > 3) {
-  console.log("Список задач переполнен");
-}
+// if (tasks === 0) {
+//   console.log("Список пуст, можно отдыхать");
+// } else if (tasks > 0 && tasks <= 3) {
+//   console.log("Есть задачи для выполнения");
+// } else if (tasks > 3) {
+//   console.log("Список задач переполнен");
+// }
 
 //урок 3
 
@@ -81,7 +81,7 @@ console.log(task.title);
 task.status = "выполнена";
 console.log(task.status);
 
-let tasks1 = [
+let tasks = [
   { id: 1, title: "Купить молоко", status: "активна"},
   { id: 2, title: "Позвонить врачу", status: "выполнена"},
   { id: 3, title: "Сделать уроки", status: "активна"},
