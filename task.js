@@ -81,7 +81,7 @@ console.log(task.title);
 task.status = "выполнена";
 console.log(task.status);
 
-let tasks = [
+let tasks1 = [
   { id: 1, title: "Купить молоко", status: "активна"},
   { id: 2, title: "Позвонить врачу", status: "выполнена"},
   { id: 3, title: "Сделать уроки", status: "активна"},
@@ -96,6 +96,16 @@ let user = {
 }
 
 console.log(user)
+
+let tasks = [
+    { id: 1, title: "Позвонить врачу", status: "активна"},
+    { id: 2, title: "Позвонить врачу", status: "выполнена"},
+    { id: 3, title: "Сходить в магазин", status: "активна"},
+    { id: 4, title: "Прочитать книгу", status: "выполнена"},
+    { id: 5, title: "Посмотреть фильм", status: "активна"},
+    { id: 6, title: "Погулять с собакой", status: "выполнена"},
+];
+
 
 function filterByStatus(tasks, status) {
   return tasks.filter((task) => task.status === status);
@@ -124,14 +134,6 @@ function searchByTitle(tasks, query) {
 
 console.log(searchByTitle(tasks, "Сд"))
 
-let tasks = [
-    { id: 1, title: "Позвонить врачу", status: "активна"},
-    { id: 2, title: "Позвонить врачу", status: "выполнена"},
-    { id: 3, title: "Сходить в магазин", status: "активна"},
-    { id: 4, title: "ПАрочитать книгу", status: "выполнена"},
-    { id: 5, title: "Посмотреть фильм", status: "активна"},
-    { id: 6, title: "Погулять с собакой", status: "выполнена"},
-];
 
 for (let i = 0; i < tasks.length; i++) {
   console.log(tasks[i].id + ": " + tasks[i].title)
