@@ -204,3 +204,8 @@
     pointer-events: none;
 }
 
+.task--done .task__title {
+    text-decoration: line-through;
+    color: #8a8398;
+    opacity: 0,7;
+}

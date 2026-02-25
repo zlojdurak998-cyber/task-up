@@ -53,41 +53,92 @@ stroke-linejoin="round"
 />
 `
 
-const deleteBtn = document.createElemеnt("button");
+const deleteBtn = document.createElement("button");
 deleteBtn.classList.add("task__action", "task__action--delete");
 deleteBtn.innerHTML = `
 <svg
-    class="task__icon"
-    viewBox="0 0 24 24"
-    width="14 "
-    height="14"
-    fill="none"
-    stroke="#cb6e6e"
-    stroke-width="2"
-    stroke-linecap="round"
-    stroke-linejoin="round"
-  >
-    <polyline points="3 6 5 6 21 6" />
-    <path d="M19 6l-1 14a2 2 0 0 0 1-2 2H8a2 2 0 0 0 1-2-2L5 6" />
-    <path d="M10 11v6" />
-    <path d="M14 11v6" />
-    <path d="M9 6V4a2 2 0 0 1 2-2h2" />
-  </svg>`;
+              class="task__icon"
+              viewBox="0 0 24 24"
+              width="14 "
+              height="14"
+              fill="none"
+              stroke="#cb6e6e"
+              stroke-width="2"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+            >
+              <polyline points="3 6 5 6 21 6" />
+              <path d="M19 6l-1 14a2 2 0 0 1-2 2H8a2 2 0 0 1-2-2L5 6" />
+              <path d="M10 11v6" />
+              <path d="M14 11v6" />
+              <path d="M9 6V4a2 2 0 0 1 2-2h2a2 2 0 0 1 2 2v2" />
+            </svg>`;
+javascript
+deleteBtn.addEventListener("click", () => {
+  const index = tasks.indexOf(task);
+  tasks.splice(index, 1);
 
+  renderTask()
+});
+
+actions.append(editBtn, deleteBtn);
+item.append(content, actions);
+
+if (task.done) {
+  item.classList.add("task--done")
+}
 
 actions.append(editBtn, deleteBtn);
 task.append(content, actions);
+meta.textContent = taskData.date
 
-return task;
+container.append(item)
+
+container.append(item)
 }
 
-const task1 = renderTask({
+// const task1 = renderTask({
+//     text: "Погулять с собакой",
+//     date: "Сегодня 17:00",
+// });
+// const task2 = renderTask({
+//     text: "Прочитать книгу",
+//     date: "Завтра 17:00",
+// });
+
+// container.append(task1, task2)
+
+const tasks = [
+  {
+    text: "Прочитать книгу",
+    date: "Сегодня 17:00",
+    done: true
+  },
+  {
     text: "Погулять с собакой",
     date: "Сегодня 17:00",
-});
-const task2 = renderTask({
-    text: "Прочитать книгу",
-    date: "Завтра 17:00",
-});
+    done: true
+  }
+]
 
-container.append(task1, task2)
+function renderTask() {
+  container.innerHTML = "";
+
+  tasks.forEach((task) => {
+    const item = document.createElement("div");
+    item.classList.add("task");
+
+    const content = document.createElement("div");
+    content.classList.add("task__content");
+
+    const title = document.createElement("div");
+    title.classList.add("task__title");
+    title.textContent = taskData.text;
+
+    const meta = document.createElement("div");
+    meta.classList.add("task__meta");
+    meta.textContent = taskData.date;
+    content.append(title, meta);
+  }
+  )
+  }
