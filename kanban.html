@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>TaskLite</title>
+  <link rel="stylesheet" href="./style.css">
+</head>
+
+<body class="todo">
+  <header class="header">
+    <div class="container header__container">
+      <h3 class="title">
+                TaskLite
+            </h3>
+      <a href="index.html" class="tab">To do</a>
+      <a href="kanban.html" class="tab">Kanban</a>
+    </div>
+  </header>
+
+  <main class="kanban container">
+    <h1 class="kanban__title">Kanban</h1>
+    <div class="board">
+      <div class="column">
+        <div class="column__header">
+          <h2 class="column__title">To Do</h2>
+          <span class="column__count"> 0 </span>
+        </div>
+
+        <div class="column__tasks">
+        </div>
+
+        <button class="column__btn">+ Добавить задачу</button>
+      </div>
+
+      <div class="column">
+        <div class="column__header">
+          <h2 class="column__title">In progress</h2>
+          <span class="column__count"> 0 </span>
+        </div>
+
+        <div class="column__tasks">
+        </div>
+
+        <button class="column__btn">+ Добавить задачу</button>
+      </div>
+
+      <div class="column">
+        <div class="column__header">
+          <h2 class="column__title">Done</h2>
+          <span class="column__count"> 0 </span>
+        </div>
+
+        <div class="column__tasks">
+        </div>
+
+        <button class="column__btn">+ Добавить задачу</button>
+      </div>
+
+      </main>
+
+      <script src="./js/kanban.js"></script>
+      
+
+</body>
+</html>

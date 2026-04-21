@@ -186,3 +186,38 @@ if (found) {
 } else {
   console.log("Задача не найдена")
 }
+
+const now = new Date();
+console.log(now)
+
+const day = now.getDate()
+const month = now.getMonth() + 1
+const year = now.getFullYear()
+
+console.log(`${day}.${month}.${year}`)
+
+const hours = now.getHours()
+const minutes = now.getMinutes()
+const seconds = now.getSeconds()
+
+console.log(`${hours}:${minutes}:${seconds}`)
+
+console.log(now.toLocaleString())
+
+
+const days = [ 
+"Воскресенье",
+"Понедельник",
+"Вторник",
+"Среда",
+"Четверг",
+"Пятница",
+"Суббота",
+];
+
+const dayName = days [now.getDay()] 
+console.log(dayName)
+
+let timeOfDay;
+if()
+
